@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Perguntas e Respostas</title>
+</head>
+<body>
+    <h1>Perguntas Frequentes</h1>
+
+    <h2>Pergunta 1:como implementaria uma análise de dados para rastrear a satisfação do cliente e  a eficiência da equipe de suporte ao produto no contexto da plataforma dadosfera? Suponha que você possa integrar soluções de service desk como zendesk. Que tipos de dados você coletaria e como utilizaria para melhorar continuamente o suporte ao produto?<br></h2>
+    <p></p>Defina Objetivos Claros:
+Primeiro, defina claramente os objetivos da análise. Isso pode incluir medir a satisfação geral do cliente, identificar padrões de problemas recorrentes, avaliar o tempo de resolução de tickets, entre outros.
+
+Coleta de Dados:
+Determine quais dados serão relevantes para a análise. No contexto de suporte ao cliente, você pode coletar dados como:
+
+Tickets de suporte: Incluindo informações sobre o problema, categoria, data de abertura e fechamento, agente responsável, etc.<br>
+Interactions do cliente: Compreenda o histórico de interações do cliente com o suporte.<br>
+Pesquisas de satisfação: Dados de pesquisas pós-atendimento para avaliar a satisfação do cliente.<br>
+Tempo de resolução: Tempo gasto para resolver cada ticket.<br>
+Feedback qualitativo: Notas ou comentários deixados pelos clientes e agentes.<br>
+Integração de Dados:
+Integre os dados coletados de fontes como Zendesk ao sistema de análise. Isso pode ser feito por meio de APIs ou integrações diretas.<br>
+
+Análise de Dados:
+A análise pode ser dividida em várias categorias:
+
+Satisfação do Cliente:
+
+Calcule o Net Promoter Score (NPS) ou outra métrica de satisfação do cliente.
+Analise os comentários e feedback dos clientes para identificar tendências e áreas de melhoria.
+Acompanhe as avaliações de satisfação em relação a diferentes agentes e tipos de problemas.<br>
+Eficiência da Equipe de Suporte:
+
+Calcule métricas como o tempo médio de resposta e o tempo médio de resolução.
+Analise o volume de tickets ao longo do tempo para identificar padrões sazonais ou picos.
+Identifique os agentes mais eficientes e aqueles que podem precisar de mais treinamento.<br>
+Análise de Causa Raiz:
+
+Identifique problemas recorrentes e as causas subjacentes.
+Determine se certos problemas estão relacionados a produtos específicos ou áreas do sistema.
+Visualização de Dados:
+Crie visualizações claras e intuitivas dos dados para facilitar a compreensão. Use gráficos, tabelas e painéis interativos para destacar informações importantes.<br>
+
+Ações de Melhoria:
+Com base nas análises, implemente ações concretas para melhorar o suporte ao cliente:
+
+Ofereça treinamento adicional aos agentes com baixo desempenho.
+Identifique problemas recorrentes e trabalhe com a equipe de desenvolvimento para corrigir problemas no produto.
+Monitore o impacto das ações de melhoria ao longo do tempo.<br>
+Iteração Contínua:
+A análise de dados deve ser um processo contínuo. Revise regularmente os resultados, ajuste suas métricas e estratégias conforme necessário e continue a iterar nas melhorias do suporte ao cliente.<br>
+
+Lembre-se de que a chave para uma análise de dados eficaz é a combinação de dados quantitativos (métricas) e dados qualitativos (feedback do cliente). Isso permitirá que você obtenha uma visão completa da satisfação do cliente e da eficiência da equipe de suporte na plataforma Dadosfera.</p>
+
+    <h2>Pergunta 2:Que pratica inovadora você utilizaria para implementar a gestão de acesso?</h2>
+    <p>Segmentação de Redes e Recursos:
+Em vez de considerar sua rede como um perímetro confiável, segmente-a em zonas mais restritas, isolando diferentes recursos em grupos. Cada zona requer autenticação e autorização distintas. <br>
+
+Autenticação Multifator (MFA):
+Exija autenticação multifator para todos os acessos, independentemente de serem internos ou externos. Isso adiciona uma camada extra de segurança, exigindo que os usuários forneçam mais de uma forma de autenticação para verificar sua identidade.<br>
+
+Políticas de Acesso Baseadas em Identidade:
+Em vez de depender apenas do endereço IP ou localização da solicitação, defina políticas de acesso baseadas na identidade do usuário, seu papel e contexto. Isso significa que mesmo se um usuário estiver na rede interna, ele só terá acesso aos recursos autorizados para sua função específica.<br>
+
+Acesso de Menor Privilégio (Least Privilege):
+Conceda aos usuários apenas os privilégios necessários para realizar suas tarefas. Isso minimiza o potencial de danos caso suas credenciais sejam comprometidas.<br>
+
+Monitoramento Contínuo:
+Implemente uma solução de monitoramento contínuo para acompanhar o comportamento do usuário e detectar atividades suspeitas ou anômalas em tempo real. <br>
+
+Automação de Respostas:
+Integre automação para responder rapidamente a eventos de segurança. Isso pode incluir a revogação automática de acesso em caso de atividades suspeitas ou a exigência de uma autenticação adicional. <br>
+
+Segurança de Microssegmentação:
+Implemente a microssegmentação, que divide a rede em segmentos menores e altamente restritos. Cada segmento possui suas próprias regras de acesso, tornando mais difícil para um invasor mover-se lateralmente na rede. <br>
+
+Análise Comportamental do Usuário:
+Utilize análise comportamental para monitorar e entender os padrões normais de atividade do usuário. Isso ajuda a identificar comportamentos anômalos que podem indicar uma violação de segurança. <br>
+
+APIs e Integrações:
+Integre sistemas de autenticação e autorização usando APIs para garantir que todas as aplicações, independentemente de serem internas ou externas, sigam as mesmas políticas de segurança.<br>
+
+Treinamento e Conscientização:
+Eduque os usuários sobre os princípios do modelo Zero Trust e os riscos de compartilhamento inadequado de credenciais.</p><br>
+
+    <h2> Pergunta 3: Temos uma tabela chamada "users_emails" contendo detalhes do usuário. Escreva uma consulta SQL que seleciona usuários que se cadastraram no últimos 30 dias e envie um relatório com esses dados</h2>
+    <p>SELECT *
+        FROM users_emails
+        WHERE data_cadastro >= DATE_SUB(CURDATE(), INTERVAL 30 DAY);<br>
+        Nesta consulta, estamos selecionando todos os campos (usando "*") da tabela "users_emails" onde a data de cadastro ("data_cadastro") é maior ou igual à data atual menos 30 dias.
+
+Após executar essa consulta no seu sistema de banco de dados, você pode usar os resultados para criar o relatório com os detalhes dos usuários que se cadastraram nos últimos 30 dias.
+        
+</p>
+
+    <!-- Você pode adicionar mais perguntas e respostas aqui -->
+
+</body>
+</html>
